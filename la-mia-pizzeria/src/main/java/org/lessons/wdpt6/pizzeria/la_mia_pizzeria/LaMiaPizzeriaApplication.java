@@ -1,14 +1,13 @@
-package org.lessons.spring.wdpt6.spring_la_mia_pizzeria_crud;
+package org.lessons.wdpt6.pizzeria.la_mia_pizzeria;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringLaMiaPizzeriaCrudApplication {
-
+public class LaMiaPizzeriaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringLaMiaPizzeriaCrudApplication.class, args);
+		SpringApplication.run(LaMiaPizzeriaApplication.class, args);
 	}
 
 }

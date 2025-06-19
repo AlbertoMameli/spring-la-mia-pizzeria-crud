@@ -1,10 +1,10 @@
-package org.lessons.spring.wdpt6.spring_la_mia_pizzeria_crud;
+package org.lessons.wdpt6.pizzeria.la_mia_pizzeria;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringLaMiaPizzeriaCrudApplicationTests {
+class LaMiaPizzeriaApplicationTests {
 
 	@Test
 	void contextLoads() {
