@@ -8,27 +8,35 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+
 //creazione tabella
 @Entity
 @Table(name = "pizzas")
-public class Pizza  implements Serializable{
+public class Pizza implements Serializable {
 
-//creazione colonne
+    // creazione colonne
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @NotNull
+    @NotBlank(message = "Name must not be null, blank or empty")
     private String name;
     @Lob
+    @NotBlank(message = "Description must not be null, blank or empty")
     private String description;
     @Lob
+    @NotBlank(message = "Image URL must not be null, blank or empty")
     private String imageUrl;
     @NotNull
+    @NotBlank(message = "Price must not be null, blank or empty")
+    @Min(value = 0, message = "The price must be greater than zero")
+    private float price;
 
-
-
-    public Pizza(){}
+    public Pizza() {
+    }
 
     public Integer getId() {
         return this.id;
@@ -69,12 +77,5 @@ public class Pizza  implements Serializable{
     public void setPrice(float price) {
         this.price = price;
     }
-    private float price;
 
-
-
-
-
-    
-    
 }
