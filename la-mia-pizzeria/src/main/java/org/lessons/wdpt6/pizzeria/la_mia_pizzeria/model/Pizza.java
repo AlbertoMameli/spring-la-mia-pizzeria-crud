@@ -30,8 +30,8 @@ public class Pizza implements Serializable {
     @Lob
     @NotBlank(message = "Image URL must not be null, blank or empty")
     private String imageUrl;
-    @NotNull
-    @NotBlank(message = "Price must not be null, blank or empty")
+
+    
     @Min(value = 0, message = "The price must be greater than zero")
     private float price;
 
